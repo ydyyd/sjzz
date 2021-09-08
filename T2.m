@@ -54,71 +54,71 @@ function T_OpeningFcn(hObject, ~, handles, varargin)
 
 % Choose default command line output for T
 
-set(handles.axes1,'color','w'); %ÉèÖÃ×ø±êÖá
-axes(handles.axes1); %Ê¹ÓÃ×ø±êÖáaxesÀ´ÉèÖÃÍ¼ÏñµÄÏÔÊ¾Î»ÖÃ£¬Í¬Ê±ĞèÒª½«axes·ÅÔÚÒ»¸öÃæ°åpanelÄÚ²¿£¬·ñÔòÍ¼Ïñ»á³¬³öaxesÇøÓò·¶Î§¡£
-axis([-12,12,-4,4]); %×ø±êÖá·¶Î§
+set(handles.axes1,'color','w'); %è®¾ç½®åæ ‡è½´
+axes(handles.axes1); %ä½¿ç”¨åæ ‡è½´axesæ¥è®¾ç½®å›¾åƒçš„æ˜¾ç¤ºä½ç½®ï¼ŒåŒæ—¶éœ€è¦å°†axesæ”¾åœ¨ä¸€ä¸ªé¢æ¿panelå†…éƒ¨ï¼Œå¦åˆ™å›¾åƒä¼šè¶…å‡ºaxesåŒºåŸŸèŒƒå›´ã€‚
+axis([-12,12,-4,4]); %åæ ‡è½´èŒƒå›´
 hold on
-axis off;   %³ıµô×ø±ê
+axis off;   %é™¤æ‰åæ ‡
 
-xa0=5;%»îÈû¶¥µã×ø±ê
+xa0=5;%æ´»å¡é¡¶ç‚¹åæ ‡
 
 handles.xa0=xa0;
 xb0=xa0;
 xb1=(xa0+4);
 
-a1=line([xa0;xa0],[2.8;-2.8],'color','m','linestyle','-','linewidth',5);   %ÉèÖÃ»îÈû
-a8=line([-5;5],[3;3],'color','b','linestyle','-','linewidth',8);%ÉèÖÃÆø¸×
-a9=line([-5;5],[-3;-3],'color','b','linestyle','-','linewidth',8);%ÉèÖÃÆø¸×
-a10=line([-5;-5],[3;-3],'color','b','linestyle','-','linewidth',8);%ÉèÖÃÆø¸×
+a1=line([xa0;xa0],[2.8;-2.8],'color','m','linestyle','-','linewidth',5);   %è®¾ç½®æ´»å¡
+a8=line([-5;5],[3;3],'color','b','linestyle','-','linewidth',8);%è®¾ç½®æ°”ç¼¸
+a9=line([-5;5],[-3;-3],'color','b','linestyle','-','linewidth',8);%è®¾ç½®æ°”ç¼¸
+a10=line([-5;-5],[3;-3],'color','b','linestyle','-','linewidth',8);%è®¾ç½®æ°”ç¼¸
 
-a3=line([-4.5;-4.5],[2.5,6],'color','g','linestyle','-','linewidth',4);%ÉèÖÃÆøÑ¹±íÁ¬Ïß
+a3=line([-4.5;-4.5],[2.5,6],'color','g','linestyle','-','linewidth',4);%è®¾ç½®æ°”å‹è¡¨è¿çº¿
 
-a2=line([xb0;xb1],[0;0],'color','m','linewidth',5);%ÉèÖÃÁ¬¸Ë
-len1=4;%Á¬¸Ë³¤
+a2=line([xb0;xb1],[0;0],'color','m','linewidth',5);%è®¾ç½®è¿æ†
+len1=4;%è¿æ†é•¿
 
 
 
-%»æÖÆÆøÑ¹±í
-theta1=0:2*pi/100:2*pi;%¼«×ø±êÓëÖ±½Ç×ø±ê»æÖÆÔ²
-x1=cos(theta1)-4.5;%(-3,7)ÎªÔ²ÖĞĞÄµãµÄ×ø±ê
+%ç»˜åˆ¶æ°”å‹è¡¨
+theta1=0:2*pi/100:2*pi;%æåæ ‡ä¸ç›´è§’åæ ‡ç»˜åˆ¶åœ†
+x1=cos(theta1)-4.5;%(-3,7)ä¸ºåœ†ä¸­å¿ƒç‚¹çš„åæ ‡
 y1=sin(theta1)+7;
-plot(x1,y1,'k','linewidth',3);%»­Ô²
-axis equal;%×ø±êÖáx\yµÈ±ÈÀı,²»¼ÓÕâ¾ä£¬Ô²»®³öÀ´¾ÍÊÇÍÖÔ²
-text(-6,9,'ÆøÑ¹±í','fontsize',16,'color','r');     
+plot(x1,y1,'k','linewidth',3);%ç”»åœ†
+axis equal;%åæ ‡è½´x\yç­‰æ¯”ä¾‹,ä¸åŠ è¿™å¥ï¼Œåœ†åˆ’å‡ºæ¥å°±æ˜¯æ¤­åœ†
+text(-6,9,'æ°”å‹è¡¨','fontsize',16,'color','r');     
 
 
 
 
-%ÆøÑ¹±í
+%æ°”å‹è¡¨
 set(handles.axes2,'color','w');
 axes(handles.axes2);
-text(-0.2,1.2,'ÆøÑ¹±í','fontsize',20,'color','b');  
-theta1=0:2*pi/100:2*pi;%¼«×ø±êÓëÖ±½Ç×ø±ê»æÖÆÔ²
+text(-0.2,1.2,'æ°”å‹è¡¨','fontsize',20,'color','b');  
+theta1=0:2*pi/100:2*pi;%æåæ ‡ä¸ç›´è§’åæ ‡ç»˜åˆ¶åœ†
 x1=cos(theta1);
 y1=sin(theta1);
-plot(handles.axes2,x1,y1,'k','linewidth',16);%»­Ô²
-axis off;  %È¡Ïû×ø±êÖáÏÔÊ¾   
-axis equal;%×ø±êÖáx\yµÈ±ÈÀı
+plot(handles.axes2,x1,y1,'k','linewidth',16);%ç”»åœ†
+axis off;  %å–æ¶ˆåæ ‡è½´æ˜¾ç¤º   
+axis equal;%åæ ‡è½´x\yç­‰æ¯”ä¾‹
 hold on;
-plot(0,0,'.','Markersize',50);%»æÖÆÔ²ÅÌÖĞĞÄµã¡£
-%»æÖÆÊ±¿Ì¶ÈÏßºÍ·Ö¿Ì¶ÈÏß
+plot(0,0,'.','Markersize',50);%ç»˜åˆ¶åœ†ç›˜ä¸­å¿ƒç‚¹ã€‚
+%ç»˜åˆ¶æ—¶åˆ»åº¦çº¿å’Œåˆ†åˆ»åº¦çº¿
 theta2=0:2*pi/12:2*pi;
-for i=1:length(theta2)-1% Ñ­»·Óï¾ä»æÖÆÖ÷¿Ì¶ÈÏß
+for i=1:length(theta2)-1% å¾ªç¯è¯­å¥ç»˜åˆ¶ä¸»åˆ»åº¦çº¿
      h=plot([0.8*cos(theta2(i)),0.97*cos(theta2(i))],[0.8*sin(theta2(i)),0.97*sin(theta2(i))]);
      set(h,'linewidth',3);
-     set(h,'color','black');%ÕâÈıÌõÓï¾ä¿ÉÒÔ·Å³ÉÒ»ÌõplotÓï¾ä£¬ÒòÎªplotÓï¾äÖĞÁ½¸öµãµÄ×ø±êÌ«³¤£¬¹ÊĞ´³ÉÁËÈıÌõÓï¾ä£»Õâ¸ö¿Ì¶ÈºóÆÚĞèÒª¸ù¾İÑ¹Á¦±í½øĞĞĞŞ¸Ä
-     num=10*(i-1);%±íÅÌÉÏÏÔÊ¾µÄÊı×Ö
+     set(h,'color','black');%è¿™ä¸‰æ¡è¯­å¥å¯ä»¥æ”¾æˆä¸€æ¡plotè¯­å¥ï¼Œå› ä¸ºplotè¯­å¥ä¸­ä¸¤ä¸ªç‚¹çš„åæ ‡å¤ªé•¿ï¼Œæ•…å†™æˆäº†ä¸‰æ¡è¯­å¥ï¼›è¿™ä¸ªåˆ»åº¦åæœŸéœ€è¦æ ¹æ®å‹åŠ›è¡¨è¿›è¡Œä¿®æ”¹
+     num=10*(i-1);%è¡¨ç›˜ä¸Šæ˜¾ç¤ºçš„æ•°å­—
      text(0.7*cos(theta2(i)+3*pi/2),0.7*sin(theta2(i)+3*pi/2),num2str(num),'FontSize',16,'HorizontalAlignment','center');
 end
 theta3=0:2*pi/60:2*pi;
-for i=1:length(theta3)%Ñ­»·Óï¾ä»æÖÆ·Ö¿Ì¶ÈÏß
+for i=1:length(theta3)%å¾ªç¯è¯­å¥ç»˜åˆ¶åˆ†åˆ»åº¦çº¿
      h=plot([0.9*cos(theta3(i)),0.97*cos(theta3(i))],[0.9*sin(theta3(i)),0.97*sin(theta3(i))]);
      set(h,'color','black')
 end
-%»æÖÆÖ¸Õë
-%»æÖÆÖ¸ÕëµÄ³õÊ¼Î»ÖÃ
-theta0=-pi/2;%¿ÉÍ¨¹ıµ÷Õûtheta0À´¸Ä±äÖ¸ÕëµÄ³õÊ¼Î»ÖÃ
-handles. h1=plot([0,0.6*cos(theta0)],[0,0.6*sin(theta0)],'r','linewidth',6);%ÉèÖÃh1¾ä±ú£¬ÊÇÎªÁËÏÂÒ»²½µ¥¶ÀÉ¾³ıÕâÌõÏß
+%ç»˜åˆ¶æŒ‡é’ˆ
+%ç»˜åˆ¶æŒ‡é’ˆçš„åˆå§‹ä½ç½®
+theta0=-pi/2;%å¯é€šè¿‡è°ƒæ•´theta0æ¥æ”¹å˜æŒ‡é’ˆçš„åˆå§‹ä½ç½®
+handles. h1=plot([0,0.6*cos(theta0)],[0,0.6*sin(theta0)],'r','linewidth',6);%è®¾ç½®h1å¥æŸ„ï¼Œæ˜¯ä¸ºäº†ä¸‹ä¸€æ­¥å•ç‹¬åˆ é™¤è¿™æ¡çº¿
 
 
 handles.output = hObject;
@@ -224,15 +224,15 @@ function pushbutton1_Callback(~, ~, handles)
 % handles    structure with handles and user data (see GUIDATA)
 T=get(handles.edit1,'string');
 V=get(handles.edit2,'string');
-%µÈÎÂº¯Êı
-P=6651.2*str2num(T)*0.0001/str2num(V);%×ª»¯Îª10µÄ5´Î·½
-pc=num2str(P);%½«Ñ¹Á¦Öµ×ª»¯Îª×Ö·û£¬ÎªµÄÊÇÏÔÊ¾³öÀ´
-%Æø¸×»îÈûÔË¶¯²¿·Ö
+%ç­‰æ¸©å‡½æ•°
+P=6651.2*str2num(T)*0.0001/str2num(V);%è½¬åŒ–ä¸º10çš„5æ¬¡æ–¹
+pc=num2str(P);%å°†å‹åŠ›å€¼è½¬åŒ–ä¸ºå­—ç¬¦ï¼Œä¸ºçš„æ˜¯æ˜¾ç¤ºå‡ºæ¥
+%æ°”ç¼¸æ´»å¡è¿åŠ¨éƒ¨åˆ†
 vf=str2num(V);
-vx=vf-5;%¼ÆËã»îÈûµÄ×ø±ê£¬Õû¸öÆø¸×²Å10£¨5+5£©
+vx=vf-5;%è®¡ç®—æ´»å¡çš„åæ ‡ï¼Œæ•´ä¸ªæ°”ç¼¸æ‰10ï¼ˆ5+5ï¼‰
 
-handles.vy=vx;%¼ÆËãÁ¬¸Ë×ó¶ËµÄ×ø±ê£¬
-vz=vy+4;%¼ÆËãÁ¬¸ËÓÒ¶ËµÄ×ø±ê£¬
+handles.vy=vx;%è®¡ç®—è¿æ†å·¦ç«¯çš„åæ ‡ï¼Œ
+vz=vy+4;%è®¡ç®—è¿æ†å³ç«¯çš„åæ ‡ï¼Œ
 
 
 dx=(10-vf)/20;
@@ -242,23 +242,23 @@ xa0=5;
 pausetime=0.01;
 for t=0:20      
     drawnow;
-    xaa1=xa0-dx*t;%»îÈûÔÚÔË¶¯¹ı³ÌÖĞµÄÓÒ¶¥µã×ø±êÎ»ÖÃ
+    xaa1=xa0-dx*t;%æ´»å¡åœ¨è¿åŠ¨è¿‡ç¨‹ä¸­çš„å³é¡¶ç‚¹åæ ‡ä½ç½®
     
     xbb0=xa0-dx*t;
     xbb1=xb1-dx*t;
     
     
-    vff=5+xaa1;%»îÈûÔË¶¯ÖĞ£¬ÆøÌåµÄÌå»ı
-    Px=6651.2*str2num(T)*0.0001/vff;%pxÎª»îÈûÃ¿´ÎÔË¶¯Î»ÖÃ¶ÔÓ¦µÄÑ¹Ç¿Öµ
+    vff=5+xaa1;%æ´»å¡è¿åŠ¨ä¸­ï¼Œæ°”ä½“çš„ä½“ç§¯
+    Px=6651.2*str2num(T)*0.0001/vff;%pxä¸ºæ´»å¡æ¯æ¬¡è¿åŠ¨ä½ç½®å¯¹åº”çš„å‹å¼ºå€¼
     position_pointer=2*pi*(Px-30)/120;
     
    
     
-    set(handles.a1,'xdata',[xaa1;xaa1],'ydata',[3;-3]);%ÉèÖÃ»îÈûÔË¶¯
+    set(handles.a1,'xdata',[xaa1;xaa1],'ydata',[3;-3]);%è®¾ç½®æ´»å¡è¿åŠ¨
     
-    set(handles.a2,'xdata',[xbb0;xbb1],'ydata',[0;0]);%ÉèÖÃÁ¬¸ËµÄÔË¶¯
     
-    set(handles.h1,'xdata',[0,0.6*cos(position_pointer)],'ydata',[0,0.6*sin(position_pointer)]);%Ñ¹Á¦±íµÄ±ä»¯
+    
+    set(handles.h1,'xdata',[0,0.6*cos(position_pointer)],'ydata',[0,0.6*sin(position_pointer)]);%å‹åŠ›è¡¨çš„å˜åŒ–
      pause(pausetime);
     
     
@@ -269,5 +269,5 @@ end
 pause(1);
 
 
-set(handles.pressure,'string',pc);%ÒÑ½«Ñ¹Á¦µÄÊä³ö¿òĞŞ¸ÄtagÎªpressure,ËùÒÔµ÷ÓÃÕâ¸ö¿Ø¼şÎªhandles.pressure
+set(handles.pressure,'string',pc);%å·²å°†å‹åŠ›çš„è¾“å‡ºæ¡†ä¿®æ”¹tagä¸ºpressure,æ‰€ä»¥è°ƒç”¨è¿™ä¸ªæ§ä»¶ä¸ºhandles.pressure
  
